@@ -1,0 +1,17 @@
+2a535b2a014c77f81ae031a3f315aa88 *DESCRIPTION
+2c3e48676085527ad0a641fcb5bdeebd *NAMESPACE
+1f18f4cf6a7ca31d9a247499fec921af *NEWS
+f5c6c4e68c4206e3a0796d69d0ef5e9e *R/koCmd.R
+7ea13a6bed1946fd5a9df3251cf6642a *R/koInstall.R
+b4b0dec3237915621891ed74d19ba3f4 *R/koRefresh.R
+6f3a89085144000c33e998425b0b975f *R/koUninstall.R
+d8801bb4e6e0a30017f91182ccd1dc3f *R/svKomodo-internal.R
+85a65ad3fd739176478d20b2ac1f7ec3 *R/svTaskCallbackManager.R
+595ee715c9336d1a21e77f5239dc9500 *TODO
+9ad96b84f192f7f1987dd3b5d6c9270e *inst/CITATION
+393a5ca445f6965873eca0259a17f833 *inst/LICENSE
+f9cbeaddb426f324f18aac0c6c788055 *man/koCmd.Rd
+1fc4eeb9541788c1f301cbedb8f159a2 *man/koInstall.Rd
+4c947e8c0a43801e79df71ea9ef7b3e9 *man/koRefresh.Rd
+3344e67255fba338c31a06509eef733b *man/svKomodo-package.Rd
+52e5561159e6866f8e26a781a354c867 *man/svTaskCallbackManager.Rd
