@@ -1,6 +1,19 @@
 \name{NEWS}
 \title{NEWS file for the svKomodo package}
 
+\section{Changes in version 0.9-59}{
+	\itemize{
+    \item{ R is now configured to be used with SciViews Komodo (Komodo Edit +
+	    SciViews-K) when the package is attached. It was previously configured
+		when it was loaded. }
+    \item{ Temporary objects are now stored in SciViews:TempEnv instead of
+	    TempEnv and consequently, svMisc >= 0.9-68 is needed. }
+    \item{ Further protection before looking for komodo with locate: (1) if
+	    locate is not there, do not try to use it, and (2) do not use it on
+		Mac OS X. }
+  }
+}
+
 \section{Changes in version 0.9-58}{
 	\itemize{
     \item{ The package was not loading correctly when not on \code{.libPaths}. Fixed. }
@@ -10,8 +23,8 @@
 \section{Changes in version 0.9-57}{
 	\itemize{
     \item{ svKomodo creates now at loading a \code{.Last.sys()} function in
-		 \code{TempEnv} indicating to Komodo Edit that R has quit. This is required
-		 to update R menus there. }
+		 \code{SciViews:TempEnv} indicating to Komodo Edit that R has quit. This
+		 is required to update R menus there. }
 	
 		\item{ The SciViews-K configuration file is not saved from here anymore
 			(CRAN now does not accept packages that write files elsewhere than in R
