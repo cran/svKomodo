@@ -152,24 +152,11 @@
 	if (.Platform$OS.type == "unix") {
 		if (Komodo == "")
 			Komodo <- "/usr/local/bin/komodo"  # Default location
-		if (!file.exists(Komodo)) {
+		if (!file.exists(Komodo))
 			Komodo <- Sys.which("komodo")[1]
-			#debugMsg("which", "returned", Komodo)
-		}
-		
-		if (length(Komodo) == 0 || Komodo == "") {
-			isLocate <- suppressWarnings(length(system('which locate',
-					intern = TRUE)) > 0)
-			if (!isLocate || isMac()) { # locate is not there or Mac OS X
-				Komodo <- NULL
-			} else {
-				Komodo <- try(suppressWarnings(system(
-					"locate --basename -e --regex ^komodo$ | grep -vF 'INSTALLDIR' | grep -F 'bin/komodo' | tail --lines=1",
-					intern = TRUE, ignore.stderr = TRUE)), silent = TRUE)
-				if (inherits(Komodo, "try-error")) Komodo <- NULL
-				#debugMsg("locate komodo", "returned", Komodo)
-			}
-		}
+		if (length(Komodo) == 0 || Komodo == "")
+			Komodo <- NULL
+			
 		## Just to avoid warnings while compiling outside of Windows...
 		readRegistry <- function() return()
 	} else {  # Windows
@@ -291,9 +278,11 @@
 	## In R 2.10, help system is completely changed
 	options(help_type = "html")
 	## Make sure the help server is started
+	## TODO: how to get it without using ::: ?
 	if (tools:::httpdPort == 0L)
 			tools::startDynamicHelp()
 	## Record the home page for the help server in an option
+	## TODO: idem here!
 	options(helphome = paste("http://127.0.0.1:", tools:::httpdPort,
 		"/doc/html/index.html", sep = ""))
 
@@ -306,11 +295,13 @@
 		htmlfile <- basename(file)
 		if (length(file) > 1) {
 			## If more then one topic is found
+			## TODO: avoid using ::: here!
 			return(paste("http://127.0.0.1:", tools:::httpdPort,
 				"/library/NULL/help/", attr(x,"topic"), sep = ""))
 		} else {
 			if(substring(htmlfile, nchar(htmlfile) -4) != ".html")
 				htmlfile <- paste(htmlfile, ".html", sep="")
+			## TODO: avoid using ::: here!
 			return(paste("http://127.0.0.1:", tools:::httpdPort,
 			"/library/", basename(dirname(dirname(file))),
 			"/html/", htmlfile, sep = ""))
