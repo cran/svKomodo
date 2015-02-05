@@ -1,7 +1,7 @@
 Package: svKomodo
 Type: Package
-Version: 0.9-62
-Date: 2014-03-01
+Version: 0.9-63
+Date: 2015-02-05
 Title: SciViews GUI API - Functions to interface with Komodo Edit/IDE
 Author: Philippe Grosjean [aut, cre]
 Authors@R: c(person("Philippe", "Grosjean", role = c("aut", "cre"),
@@ -17,7 +17,7 @@ Description: Functions to manage the GUI client, like Komodo with the
 License: GPL-2
 URL: http://www.sciviews.org/SciViews-R
 BugReports: https://r-forge.r-project.org/tracker/?group_id=194
-Packaged: 2014-03-02 06:59:08 UTC; phgrosjean
 NeedsCompilation: no
+Packaged: 2015-02-05 11:09:13 UTC; phgrosjean
 Repository: CRAN
-Date/Publication: 2014-03-02 12:40:50
+Date/Publication: 2015-02-05 14:32:12
